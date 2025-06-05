@@ -1,25 +1,23 @@
 import express from 'express';
-import { createproject, deleteProject, getAllProjects, getProjectById, UpdateProject } from '../controllers/project.js';
+import { createproject, deleteProject, getAllProjects, getProjectById, updateProject } from '../controllers/project.js';
 
 const router = express.Router();
-// HTTP  Verbs for RESTful API GET, POST, PUT, DELETE
 
+// HTTP Verbs for RESTful API GET, POST, PUT, DELETE
 
-//GET / api/Projects
+// GET /api/projects
 router.get('/', getAllProjects);
 
-//GET / api/Projects/:id
+// GET /api/projects/:id
 router.get('/:id', getProjectById);
 
-//GET / api/Projects
+// POST /api/projects
 router.post('/', createproject);
 
-//GET / api/Projects/:id
-router.put('/:id', UpdateProject);
+// PUT /api/projects/:id
+router.put('/:id', updateProject);
 
-//delete / api/project/:id
-router.delete('/:id', deleteProject);
-
-
+// DELETE /api/projects/:id
+router.delete('/:id', deleteProject)
 
 export default router;

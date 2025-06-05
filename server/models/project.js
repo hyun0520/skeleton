@@ -10,14 +10,14 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    startDate:{
+    startDate: {
         type: Date,
         required: true,
     },
-    endDate:{
+    endDate: {
         type: Date,
         required: true,
-    }
+    },
 });
 
 export default mongoose.model('Project', projectSchema);
