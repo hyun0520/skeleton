@@ -1,14 +1,13 @@
   /*
-  FileName: users.js
+  FileName: ../controllers/users.js
   Name:Chunghyun Lee
   Student_number: 301000913
   Course: COMP229-401
   Date: 2025/06/06
   */
-
 import UserModel from '../models/users.js';
 
-// Read all users
+// Read all users (Get)
 export const getUsers = async (req, res) => {
     try {
         const users = await UserModel.find();
@@ -17,7 +16,7 @@ export const getUsers = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-// Read all users ID
+// Read all users ID (Get)
 export const getUsersId = async (req, res) => {
   try {
     const { id } = req.params;
